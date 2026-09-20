@@ -34,7 +34,7 @@
    DARK THEME
 ========================================= */
 
-[data-theme="dark"] {
+/* [data-theme="dark"] {
     --bg: #080b12;
 
     --surface: rgba(25, 26, 30, 0.75);
@@ -48,7 +48,7 @@
 
     --shadow:
         0 20px 60px rgba(0, 0, 0, .35);
-}
+} */
 
 
 /* =========================================
@@ -97,7 +97,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
 
-    overflow-x: hidden;
+    overflow: auto;
 
     transition:
         background-color .4s ease,
@@ -382,11 +382,10 @@ button {
 .box,
 .box-2 {
     position: relative;
-
+    margin-bottom: 34px;
+    margin: auto;
     width: min(90%, 700px);
-
-    margin: 120px auto 40px;
-
+    margin-top: 20px;
     padding: 30px;
 
     border:
@@ -410,7 +409,7 @@ button {
 
     text-align: center;
 
-    overflow: hidden;
+    overflow:auto;
 
     transition:
         transform .35s var(--transition),
@@ -533,8 +532,8 @@ section .box:hover {
    FOOTER
 ========================================= */
 
-.f {
-    margin-top: 80px;
+/* .f {
+    margin-top: 80px; 
 
     padding: 25px;
 
@@ -546,10 +545,12 @@ section .box:hover {
         1px solid var(--border);
 
     background:
-        rgba(0, 0, 0, .15);
+        rgba(0, 0, 0, .15); 
+}  */
+.h0{
+    text-align: center;
+    margin-top: 15px;
 }
-
-
 /* =========================================
    IMAGES
 ========================================= */
@@ -772,10 +773,27 @@ img:hover {
         width: 100%;
     }
 
+    /* Hide menu by default */
     .desktop-nav {
         display: none;
     }
 
+    /* Show menu when JavaScript adds "active" */
+    .desktop-nav.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 75px;
+        right: 10px;
+        left: 10px;
+        padding: 15px;
+        gap: 5px;
+
+        background: rgba(15, 23, 42, .95);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+    }
+}
     .mobile-menu-button {
         display: flex;
     }
@@ -791,7 +809,6 @@ img:hover {
     .box-2 {
         padding: 25px;
     }
-}
 
 
 @media (max-width: 520px) {
@@ -847,3 +864,4 @@ img:hover {
         padding: 22px 16px;
     }
 }
+          

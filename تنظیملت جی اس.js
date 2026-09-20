@@ -60,3 +60,9 @@
 //     location.reload();
 
 // });
+const menuBtn = document.querySelector(".mobile-menu-button");
+const navLinks = document.querySelector(".desktop-nav");
+
+menuBtn.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+    });
